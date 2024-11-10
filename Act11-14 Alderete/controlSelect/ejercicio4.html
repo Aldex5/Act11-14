@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Múltiple Choice</title>
+    <script>
+        function verificarRespuestas() {
+            const respuestasCorrectas = {
+                "pregunta1": "respuesta1",
+                "pregunta2": "respuesta2",
+                "pregunta3": "respuesta3",
+                "pregunta4": "respuesta4"
+            };
+            let correctas = 0;
+            let incorrectas = 0;
+            for (let pregunta in respuestasCorrectas) {
+                const seleccion = document.getElementById(pregunta).value;
+                if (seleccion === respuestasCorrectas[pregunta]) {
+                    correctas++;
+                } else {
+                    incorrectas++;
+                }
+            }
+            alert(`Correctas: ${correctas}, Incorrectas: ${incorrectas}`);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Examen Múltiple Choice</h2>
+
+    <label>Pregunta 1: ¿Cuál es la capital de Francia?</label>
+    <select id="pregunta1">
+        <option value="respuesta1">París</option>
+        <option value="respuesta2">Londres</option>
+        <option value="respuesta3">Berlín</option>
+        <option value="respuesta4">Madrid</option>
+    </select>
+
+    <label>Pregunta 2: ¿Cuál es el planeta más cercano al Sol?</label>
+    <select id="pregunta2">
+        <option value="respuesta1">Tierra</option>
+        <option value="respuesta2">Mercurio</option>
+        <option value="respuesta3">Marte</option>
+        <option value="respuesta4">Venus</option>
+    </select>
+
+    <label>Pregunta 3: ¿Cuál es el metal más abundante en la Tierra?</label>
+    <select id="pregunta3">
+        <option value="respuesta1">Plata</option>
+        <option value="respuesta2">Oro</option>
+        <option value="respuesta3">Aluminio</option>
+        <option value="respuesta4">Hierro</option>
+    </select>
+
+    <label>Pregunta 4: ¿Cuál es el animal más rápido?</label>
+    <select id="pregunta4">
+        <option value="respuesta1">Guepardo</option>
+        <option value="respuesta2">León</option>
+        <option value="respuesta3">Tigre</option>
+        <option value="respuesta4">Leopardo</option>
+    </select>
+
+    <button onclick="verificarRespuestas()">Verificar Respuestas</button>
+
+</body>
+</html>
